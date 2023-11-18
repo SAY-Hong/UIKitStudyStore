@@ -11,38 +11,28 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        super.viewDidLoad()
-        let redView = UIView()
-        redView.backgroundColor = UIColor.red
-        redView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(redView)
+
+        let tapButton = UIButton()
+        tapButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let greenView = UIView()
-        greenView.backgroundColor = UIColor.green
-        greenView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(greenView)
+        tapButton.setTitle("Button", for: UIControl.State.normal)
+        tapButton.backgroundColor = UIColor.blue
+        tapButton.frame = CGRect(x: 50, y: 100, width: 150, height: 60)
         
-        
+        self.view.addSubview(tapButton)
+
         let constraints = [
-            redView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            redView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            redView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            redView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/3),
-            
-            greenView.leadingAnchor.constraint(equalTo: self.view.centerXAnchor),
-            greenView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            greenView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            greenView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1/3),
-            greenView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1/2),
-            
-            
+            tapButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            tapButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ]
+        
         
         NSLayoutConstraint.activate(constraints)
         
-        //createImageLayout()
     }
+    
+    //createImageLayout()
+}
     
 //    func createImageLayout() {
 //        let imageView = UIImageView()
@@ -61,7 +51,7 @@ class ViewController: UIViewController {
 //        ]
 //        
 //        NSLayoutConstraint.activate(constraints)
-    }
+    
     
 //    func createLayout() {
 //        let superView = self.view

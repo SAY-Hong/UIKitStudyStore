@@ -12,18 +12,27 @@ class Example4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let tapButton = UIButton()
+        tapButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        tapButton.setTitle("Button", for: UIControl.State.normal)
+        tapButton.backgroundColor = UIColor.blue
+        
+        
+        self.view.addSubview(tapButton)
+
+        let constraints = [
+            tapButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            tapButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            tapButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50)
+        ]
+
+        
+        NSLayoutConstraint.activate(constraints)
+        
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+#Preview {
+    Example4ViewController()
 }

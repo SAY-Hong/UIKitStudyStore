@@ -13,11 +13,13 @@
 		B123B53F2B01C6AD00568C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B123B53D2B01C6AD00568C30 /* Main.storyboard */; };
 		B123B5412B01C6AD00568C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B123B5402B01C6AD00568C30 /* Assets.xcassets */; };
 		B123B5442B01C6AD00568C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B123B5422B01C6AD00568C30 /* LaunchScreen.storyboard */; };
+		B1A675092B02F61300F5D02D /* Example4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A675082B02F61300F5D02D /* Example4ViewController.swift */; };
+		B1A675132B033B3000F5D02D /* FormatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A675122B033B3000F5D02D /* FormatViewController.swift */; };
 		B1FD76382B02038500ED7218 /* roofi.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FD76372B02038500ED7218 /* roofi.png */; };
 		B1FD763A2B0205EA00ED7218 /* LayOutExample1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD76392B0205EA00ED7218 /* LayOutExample1ViewController.swift */; };
 		B1FD763C2B02095A00ED7218 /* Example2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD763B2B02095A00ED7218 /* Example2ViewController.swift */; };
 		B1FD763E2B020CB200ED7218 /* Example3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD763D2B020CB200ED7218 /* Example3ViewController.swift */; };
-		B1FD76402B0212F600ED7218 /* Example4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD763F2B0212F600ED7218 /* Example4ViewController.swift */; };
+		B1FD76402B0212F600ED7218 /* Example5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FD763F2B0212F600ED7218 /* Example5ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +31,13 @@
 		B123B5402B01C6AD00568C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B123B5432B01C6AD00568C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B123B5452B01C6AD00568C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1A675082B02F61300F5D02D /* Example4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example4ViewController.swift; sourceTree = "<group>"; };
+		B1A675122B033B3000F5D02D /* FormatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatViewController.swift; sourceTree = "<group>"; };
 		B1FD76372B02038500ED7218 /* roofi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roofi.png; sourceTree = "<group>"; };
 		B1FD76392B0205EA00ED7218 /* LayOutExample1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayOutExample1ViewController.swift; sourceTree = "<group>"; };
 		B1FD763B2B02095A00ED7218 /* Example2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example2ViewController.swift; sourceTree = "<group>"; };
 		B1FD763D2B020CB200ED7218 /* Example3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example3ViewController.swift; sourceTree = "<group>"; };
-		B1FD763F2B0212F600ED7218 /* Example4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example4ViewController.swift; sourceTree = "<group>"; };
+		B1FD763F2B0212F600ED7218 /* Example5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example5ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,9 @@
 				B1FD76392B0205EA00ED7218 /* LayOutExample1ViewController.swift */,
 				B1FD763B2B02095A00ED7218 /* Example2ViewController.swift */,
 				B1FD763D2B020CB200ED7218 /* Example3ViewController.swift */,
-				B1FD763F2B0212F600ED7218 /* Example4ViewController.swift */,
+				B1A675082B02F61300F5D02D /* Example4ViewController.swift */,
+				B1FD763F2B0212F600ED7218 /* Example5ViewController.swift */,
+				B1A675122B033B3000F5D02D /* FormatViewController.swift */,
 				B123B53D2B01C6AD00568C30 /* Main.storyboard */,
 				B123B5402B01C6AD00568C30 /* Assets.xcassets */,
 				B1FD76372B02038500ED7218 /* roofi.png */,
@@ -156,10 +162,12 @@
 			files = (
 				B123B53C2B01C6AD00568C30 /* ViewController.swift in Sources */,
 				B1FD763E2B020CB200ED7218 /* Example3ViewController.swift in Sources */,
+				B1A675132B033B3000F5D02D /* FormatViewController.swift in Sources */,
 				B123B5382B01C6AD00568C30 /* AppDelegate.swift in Sources */,
-				B1FD76402B0212F600ED7218 /* Example4ViewController.swift in Sources */,
+				B1FD76402B0212F600ED7218 /* Example5ViewController.swift in Sources */,
 				B1FD763C2B02095A00ED7218 /* Example2ViewController.swift in Sources */,
 				B123B53A2B01C6AD00568C30 /* SceneDelegate.swift in Sources */,
+				B1A675092B02F61300F5D02D /* Example4ViewController.swift in Sources */,
 				B1FD763A2B0205EA00ED7218 /* LayOutExample1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

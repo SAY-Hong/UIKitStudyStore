@@ -40,6 +40,6 @@ class LayOutExample1ViewController: UIViewController {
     }
 }
 
-//#Preview {
-//    LayOutExample1ViewController()
-//}
+#Preview {
+    LayOutExample1ViewController()
+}

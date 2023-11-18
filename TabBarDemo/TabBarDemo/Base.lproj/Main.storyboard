@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L42-lh-oIv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--첫 화면-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Tab1ViewController" customModule="TabBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-Dc-D96">
+                                <rect key="frame" x="50" y="382" width="293" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="데이터 전달하기"/>
+                                <connections>
+                                    <segue destination="vMG-7J-cuv" kind="show" id="V8f-YN-2KH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터를 입력하세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-Sf-8jS">
+                                <rect key="frame" x="16" y="119" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHT-XG-V0s">
+                                <rect key="frame" x="16" y="172" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여기에 어떤 값이 올까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-rt-GcO">
+                                <rect key="frame" x="112" y="501" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="PHT-XG-V0s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1IB-LO-JOi"/>
+                            <constraint firstItem="PIb-Sf-8jS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2N2-i9-Xpw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wIc-Dc-D96" secondAttribute="bottom" constant="352" id="5VL-Ag-UQ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wIc-Dc-D96" secondAttribute="trailing" constant="50" id="NOq-Wh-H0c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PHT-XG-V0s" secondAttribute="trailing" constant="16" id="Tlk-gF-BJO"/>
+                            <constraint firstItem="wIc-Dc-D96" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Wo7-RQ-gW6"/>
+                            <constraint firstItem="PIb-Sf-8jS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gwY-rz-H4m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIb-Sf-8jS" secondAttribute="trailing" constant="16" id="jdm-Ga-RgH"/>
+                            <constraint firstItem="wIc-Dc-D96" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sx3-O3-cni"/>
+                            <constraint firstItem="PHT-XG-V0s" firstAttribute="top" secondItem="PIb-Sf-8jS" secondAttribute="bottom" constant="32" id="yHm-69-Lfz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="첫 화면" id="ond-Yy-na7"/>
+                    <connections>
+                        <outlet property="inputData" destination="PHT-XG-V0s" id="m6K-FI-bDh"/>
+                        <outlet property="result" destination="dXF-rt-GcO" id="hbr-Wo-xTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884.7328244274809" y="-256.33802816901408"/>
+        </scene>
+        <!--이전 뷰의 데이터 넘겨받기-->
+        <scene sceneID="6yL-i3-83q">
+            <objects>
+                <viewController id="vMG-7J-cuv" customClass="Scene2ViewController" customModule="TabBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wMh-n6-UOm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앞쪽에서 어떤 값이 올까요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22a-wh-Fmc">
+                                <rect key="frame" x="16" y="119" width="361" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BqU-b0-PbV">
+                                <rect key="frame" x="16" y="172" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgO-KA-vdd">
+                                <rect key="frame" x="50" y="382" width="293" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="데이터 재전송하기"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RWe-fs-DGU"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="22a-wh-Fmc" firstAttribute="top" secondItem="RWe-fs-DGU" secondAttribute="top" constant="16" id="4Am-Oh-BIB"/>
+                            <constraint firstItem="QgO-KA-vdd" firstAttribute="leading" secondItem="RWe-fs-DGU" secondAttribute="leading" constant="50" id="HH3-IC-6Xk"/>
+                            <constraint firstItem="RWe-fs-DGU" firstAttribute="trailing" secondItem="QgO-KA-vdd" secondAttribute="trailing" constant="50" id="Ooh-wR-vDb"/>
+                            <constraint firstItem="BqU-b0-PbV" firstAttribute="leading" secondItem="RWe-fs-DGU" secondAttribute="leading" constant="16" id="cmG-Wj-caF"/>
+                            <constraint firstItem="RWe-fs-DGU" firstAttribute="trailing" secondItem="22a-wh-Fmc" secondAttribute="trailing" constant="16" id="dHF-r0-ngs"/>
+                            <constraint firstItem="RWe-fs-DGU" firstAttribute="trailing" secondItem="BqU-b0-PbV" secondAttribute="trailing" constant="16" id="gyj-6b-6bl"/>
+                            <constraint firstItem="BqU-b0-PbV" firstAttribute="top" secondItem="22a-wh-Fmc" secondAttribute="bottom" constant="32" id="hAS-hE-ejK"/>
+                            <constraint firstItem="QgO-KA-vdd" firstAttribute="centerX" secondItem="wMh-n6-UOm" secondAttribute="centerX" id="n4n-Lp-qFj"/>
+                            <constraint firstItem="QgO-KA-vdd" firstAttribute="top" secondItem="BqU-b0-PbV" secondAttribute="bottom" constant="176" id="oLg-kC-PY8"/>
+                            <constraint firstItem="22a-wh-Fmc" firstAttribute="leading" secondItem="RWe-fs-DGU" secondAttribute="leading" constant="16" id="ykV-MM-Xbm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="이전 뷰의 데이터 넘겨받기" id="KCu-63-dIN"/>
+                    <connections>
+                        <outlet property="scene2TextField" destination="BqU-b0-PbV" id="wPY-Rl-gGj"/>
+                        <outlet property="showTex" destination="22a-wh-Fmc" id="CVS-yH-FFW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBS-er-2KX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3172" y="-256"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="wHH-O5-vcg">
+            <objects>
+                <viewController id="iyH-Bd-F5X" customClass="Tab2ViewController" customModule="TabBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYB-fW-b72">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uQs-XI-GR3"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up.fill" catalog="system" selectedImage="square.and.arrow.up.fill" id="7ds-cF-0UH"/>
+                    <navigationItem key="navigationItem" id="iLW-ZQ-A29"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lV0-dd-ePb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="406"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jOU-ml-EKu">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L42-lh-oIv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wFu-1n-XU8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LtK-Ne-0hO" kind="relationship" relationship="viewControllers" id="bcM-Ih-Ljv"/>
+                        <segue destination="iyH-Bd-F5X" kind="relationship" relationship="viewControllers" id="VKE-La-n9J"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJs-wq-EPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="cbz-wc-rfA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LtK-Ne-0hO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up.fill" catalog="system" selectedImage="square.and.arrow.up.fill" id="4hF-lu-78v"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="beX-Yh-9oM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7bt-kr-lfb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxk-vx-7Ps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.7251908396945" y="-256.33802816901408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

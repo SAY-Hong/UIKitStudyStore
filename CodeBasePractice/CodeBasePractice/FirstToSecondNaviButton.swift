@@ -27,7 +27,7 @@ class FirstToSecondNaviButton: UIButton {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("")
+        fatalError()
     }
 }
 

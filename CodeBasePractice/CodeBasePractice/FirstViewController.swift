@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
         
         //MARK: 두번째 뷰로 넘어가는 버튼 ver.1
         //네비게이션바에 버튼 넣기
-        let rightButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.play, target: self, action: #selector(pressButton(_ :)))
+        let rightButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.play, target: self, action: #selector(goToThirdViewButton(_ :)))
         self.navigationItem.rightBarButtonItem = rightButton
         
         //MARK: 두번째 뷰로 넘어가는 버튼 ver.2
@@ -29,7 +29,7 @@ class FirstViewController: UIViewController {
         nextViewButton.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(nextViewButton)
-        nextViewButton.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
+        nextViewButton.addTarget(self, action: #selector(goToSecondViewButton), for: .touchUpInside)
         
         let constaints = [
             nextViewButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -38,11 +38,15 @@ class FirstViewController: UIViewController {
         
         NSLayoutConstraint.activate(constaints)
     }
-    @objc func pressButton(_ sender: UIButton) {
+    @objc func goToSecondViewButton(_ sender: UIButton) {
         //MARK: @IBAction?
-        //IBAction을 안쓰고 이렇게 해도 동작을 하기는 하는데... 음.. 명확한 차이점을 어디서 느껴야하나..
         let secondView = SecondViewController()
         self.navigationController?.pushViewController(secondView, animated: true)
+    }
+    
+    @objc func goToThirdViewButton(_ sender: UIButton) {
+        let thirdView = PracticeTableViewController()
+        self.navigationController?.pushViewController(thirdView, animated: true)
     }
 
 }
