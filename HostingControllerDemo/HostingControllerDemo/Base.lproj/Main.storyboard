@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PRV-MF-Ccd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HostingControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFN-3T-GER">
+                                <rect key="frame" x="103.66666666666669" y="103" width="186" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Second Screen"/>
+                                <connections>
+                                    <segue destination="DVN-8Q-ckm" kind="show" destinationCreationSelector="showSwiftUIView:" id="JO4-kC-cC9"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zN4-kX-zc8">
+                                <rect key="frame" x="64" y="170" width="265" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="vN7-5S-UZU"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="k7W-fc-65m" kind="embed" destinationCreationSelector="embedSwiftUiView:" id="IQ4-Dy-DwG"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EC4-l6-sE7">
+                                <rect key="frame" x="0.0" y="628" width="393" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="0su-K4-hLo"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="v5s-9H-CSs" kind="embed" destinationCreationSelector="embedPracticeView:" id="O2t-l3-dVY"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="실습하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sms-Id-krV">
+                                <rect key="frame" x="16" y="580" width="90" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EC4-l6-sE7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4f9-Ze-nZl"/>
+                            <constraint firstItem="EC4-l6-sE7" firstAttribute="top" secondItem="Sms-Id-krV" secondAttribute="bottom" constant="16" id="KLe-5M-6q3"/>
+                            <constraint firstItem="kFN-3T-GER" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="N3c-tr-2Ea"/>
+                            <constraint firstItem="Sms-Id-krV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ray-KV-qmM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zN4-kX-zc8" secondAttribute="trailing" constant="64" id="UcX-sU-xyh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EC4-l6-sE7" secondAttribute="bottom" constant="16" id="erV-WF-HAD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EC4-l6-sE7" secondAttribute="trailing" id="fI7-zH-YT9"/>
+                            <constraint firstItem="zN4-kX-zc8" firstAttribute="top" secondItem="kFN-3T-GER" secondAttribute="bottom" constant="32" id="gX6-Pl-Gh5"/>
+                            <constraint firstItem="zN4-kX-zc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="kTh-l2-ZsQ"/>
+                            <constraint firstItem="kFN-3T-GER" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qpz-a2-H6Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yh4-Wb-tnX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.9312977099237" y="-2.1126760563380285"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="c6p-AO-Qct">
+            <objects>
+                <hostingController id="DVN-8Q-ckm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Kgj-zP-AgA"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4s9-05-FQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="-273"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wjr-0a-rID">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PRV-MF-Ccd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iKy-el-BOi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iXf-Jc-mxL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhU-qv-8FN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="Fo4-pI-F4A">
+            <objects>
+                <hostingController id="k7W-fc-65m" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8C-so-RyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="155"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="vPT-yb-43N">
+            <objects>
+                <hostingController id="v5s-9H-CSs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfY-tz-uts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="520"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
